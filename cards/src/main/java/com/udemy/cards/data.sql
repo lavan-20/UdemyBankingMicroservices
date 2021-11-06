@@ -1,0 +1,12 @@
+insert into customers (customer_id, name, email, phone_no, created_ts) values (1, 'Lavanya','lav@gmail.com',1234556777,sysdate);
+
+insert into cards (CARD_NUMBER, CUSTOMER_ID, CARD_TYPE, TOTAL_AMOUNT, SPENT_AMOUNT, BALANCE_AMOUNT, VALID_FROM) values 
+(12233434, SELECT CUSTOMER_ID FROM CUSTOMERS WHERE NAME = 'Lavanya', 'Debit', 1200000, 0, 1200000, to_date('25-Feb-2021'));
+
+insert into cards (CARD_NUMBER, CUSTOMER_ID, CARD_TYPE, TOTAL_AMOUNT, SPENT_AMOUNT, BALANCE_AMOUNT, VALID_FROM) values 
+(12233435, SELECT CUSTOMER_ID FROM CUSTOMERS WHERE NAME = 'Lavanya', 'Credit', 1200000, 200000, 1000000,to_date('25-Feb-2021'));
+
+insert into cards (CARD_NUMBER, CUSTOMER_ID, CARD_TYPE, TOTAL_AMOUNT, SPENT_AMOUNT, BALANCE_AMOUNT, VALID_FROM) values 
+(12233436, SELECT CUSTOMER_ID FROM CUSTOMERS WHERE NAME = 'Lavanya', 'Debit', 1200000, 0, 1200000,to_date('25-Feb-2021'));
+
+commit;
