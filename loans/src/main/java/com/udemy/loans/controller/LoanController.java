@@ -19,6 +19,7 @@ public class LoanController {
 	
 	@PostMapping(value="/getLoanDetails")
 	public List<Loans> getLoanDetails(@RequestBody final Customers customer) {
-		return repo.getByCustomerIdOrderByCreatedTsDesc(customer.getCustomerId());
+		List<Loans> loans = repo.getByCustomerIdOrderByCreatedTsDesc(customer.getCustomerId());
+		return loans;
 	}
 }
