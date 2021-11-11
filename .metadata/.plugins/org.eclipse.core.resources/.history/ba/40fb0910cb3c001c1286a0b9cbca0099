@@ -1,0 +1,6 @@
+package com.udemy.accounts.repository;
+
+
+public class AccountRepository {
+
+}

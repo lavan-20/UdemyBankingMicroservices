@@ -1,0 +1,30 @@
+package com.udemy.accounts.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Setter @Getter @ToString
+public class Customer {
+	
+	@Id
+	@Column(name = "CUSTOMER_ID")
+	private int customerId;
+	
+	private String name;
+	private String email;
+	
+	@Column(name = "PHONE_NO")
+	private long phoneNumber;
+	
+	@Column(name = "CREATED_TS")
+	private Date createTs;
+	
+}

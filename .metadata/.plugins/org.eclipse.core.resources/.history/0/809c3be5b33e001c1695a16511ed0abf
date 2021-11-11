@@ -1,0 +1,22 @@
+package com.udemy.loans.entity;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.hibernate.annotations.GeneratorType;
+
+public class Loan {
+
+	@Column(name="LOAN_ID")
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int loanId;
+	CUSTOMER_ID INT,
+	LOAN_TYPE VARCHAR2(100),
+	START_DATE DATE,
+	TOTAL_AMOUNT INT,
+	PAID_AMOUNT INT,
+	OUTSTANDING_AMOUNT INT,
+	CREATED_TS DATE
+}

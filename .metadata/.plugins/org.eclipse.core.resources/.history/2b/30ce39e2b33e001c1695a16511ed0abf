@@ -1,0 +1,5 @@
+package com.udemy.loans.entity;
+
+public class Loan {
+
+}

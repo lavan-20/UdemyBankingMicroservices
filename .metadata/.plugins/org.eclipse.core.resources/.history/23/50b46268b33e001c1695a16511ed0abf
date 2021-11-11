@@ -1,0 +1,5 @@
+package com.udemy.loans.repository;
+
+public class LoanRepository {
+
+}

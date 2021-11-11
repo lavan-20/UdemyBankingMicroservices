@@ -1,0 +1,21 @@
+package com.udemy.cards.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.udemy.cards.entity.Cards;
+import com.udemy.cards.entity.Customers;
+
+@RestController
+public class CardController {
+
+	@PostMapping(value="/getCardDetails")
+	public List<Cards> getCardDetailsById(@RequestBody final Customers customer){
+		return
+	}
+	
+}

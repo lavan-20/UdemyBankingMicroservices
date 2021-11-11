@@ -1,0 +1,22 @@
+package com.udemy.loans.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.udemy.loans.entity.Customer;
+import com.udemy.loans.entity.Loan;
+import com.udemy.loans.repository.LoanRepository;
+
+@RestController
+public class LoanController {
+
+	@Autowired
+	private LoanRepository repo;
+	
+	@PostMapping(value="/getLoanDetails")
+	public Loan getLoanDetails(@RequestParam final Customer customer) {
+		return repo.getByCustomerIdOrderByCreatedTsDesc(customer.getCustomerId());
+	}
+}

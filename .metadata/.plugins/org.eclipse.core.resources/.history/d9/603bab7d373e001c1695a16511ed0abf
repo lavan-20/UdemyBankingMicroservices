@@ -1,0 +1,22 @@
+DROP TABLE IF EXIST CUSTOMER;
+DROP TABLE IF EXIST ACCOUNT;
+
+CREATE TABLE CUSTOMER(
+	CUSTOMER_ID INT AUTO_INCREMENT PRIMARY KEY,
+	NAME VARCHAR2(100),
+	EMAIL VARCHAR2(100),
+	PHONE_NO INT,
+	CREATED_TS DATE
+);
+
+CREATE TABLE ACCOUNT(
+	CUSTOMER_ID INT AUTO_INCREMENT PRIMARY KEY,
+	ACCOUNT_NO INT,
+	ACCOUNT_TYPE VARCHAR2(100),
+	BRANCH_ADDRESS VARCHAR2(100),
+	CREATED_TS DATE
+);
+
+insert into customer (name, email, phone_no, created_ts) values ('Lavanya','lav@gmail.com',1234556777,sysdate);
+insert into account (name, email, phone_no, created_ts) values (select customer_id from customer where name = 'Lavanya'
+,'1276772280','Savings','Chamiers',sysdate);

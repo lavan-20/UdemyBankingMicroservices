@@ -1,0 +1,25 @@
+package com.udemy.accounts.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+public class Account {
+	
+	@Column(name = "CUSTOMER_ID")
+	private int customerId;
+	@Column(name = "ACCOUNT_NO")
+	private long accountNumber;
+	@Column(name = "ACCOUNT_TYPE")
+	private String accountType;
+	@Column(name = "ACCOUNT_TYPE")
+	private String accountType;
+	@Column(name = "CREATED_TS")
+	private Date createDate;
+	
+	
+	
+
+}
